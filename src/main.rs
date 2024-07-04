@@ -13,8 +13,8 @@ fn main() -> ! {
 
     let mut timer = Timer::new(board.TIMER0);
 
-    let _ = board.display_pins.col1.set_low();
-    let mut row1 = board.display_pins.row1;
+    let _ = board.display_pins.col3.set_low();
+    let mut row1 = board.display_pins.row2;
 
     loop {
         let _ = row1.set_low();
