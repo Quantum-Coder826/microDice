@@ -7,7 +7,10 @@ use consts::NUMS;
 
 use cortex_m_rt::entry;
 use embedded_hal::digital::{InputPin, OutputPin};
-use microbit::{board::Board, display::blocking::Display, hal::Timer};
+use microbit::{
+    board::Board,
+    display::blocking::Display, 
+    hal::Timer};
 
 #[panic_handler]
 fn panic(_i: &PanicInfo) -> !{
@@ -16,24 +19,13 @@ fn panic(_i: &PanicInfo) -> !{
 
 #[entry]
 fn main() -> ! {
-    let mut board = Board::take().unwrap();
+    let board = Board::take().unwrap();
     let mut display = Display::new(board.display_pins);
     let mut timer = Timer::new(board.TIMER0);
 
     let mut index_num: i8 = 0;
 
     loop {
-        //if let Ok(true) = board.buttons.button_a.is_high() {
-            //index_num += 1;
-        //}
-        //if let Ok(true) = board.buttons.button_b.is_high() {
-            //index_num -= 1;
-        //}
-        // prefent out of bounds index
-        index_num += 1;
-        if index_num > 25 {index_num = 0};
-        if index_num < 0 {index_num = 25};
-
-        display.show(&mut timer, NUMS[index_num as usize], 500)
+        mma8x5x
     }
 }

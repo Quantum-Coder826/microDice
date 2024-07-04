@@ -153,6 +153,7 @@ dependencies = [
  "cortex-m-rt",
  "embedded-hal 1.0.0",
  "microbit",
+ "mma8x5x",
  "panic-halt",
  "rtt-target",
 ]
@@ -175,6 +176,15 @@ dependencies = [
  "embedded-hal 1.0.0",
  "nrf51-hal",
  "tiny-led-matrix",
+]
+
+[[package]]
+name = "mma8x5x"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "319ba939d6c8c6fbb22dbc07fd9c9a1ab8d7a0c077ae42ad124b655560569cb8"
+dependencies = [
+ "embedded-hal 0.2.7",
 ]
 
 [[package]]
