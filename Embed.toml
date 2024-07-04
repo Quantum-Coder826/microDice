@@ -2,7 +2,7 @@
 chip = "nRF51822_xxAA"
 
 [default.rtt]
-enabled = false
+enabled = false 
 
 [default.gdb]
 enabled = false
