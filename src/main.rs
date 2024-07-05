@@ -21,13 +21,12 @@ fn main() -> ! {
     let mut index_num: i8 = 0;
 
 loop {
-        
-        index_num += 1;
         // loop indexing when overflow
         if index_num > 25 { index_num = 0; }
         if index_num < 0 { index_num = 25; }
 
-        display.show(&mut timer, NUMS[index_num as usize], 150);
-        display.clear()
+        display.show(&mut timer, NUMS[index_num as usize], 250);
+        display.clear();
+        index_num += 1;
     }
 }
